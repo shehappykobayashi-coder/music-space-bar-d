@@ -1,25 +1,29 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+/* ============================================================
+   Home Page — Music & Space Bar D
+   Design: "Amber Hideaway" — Deep charcoal + amber gold
+   Sections: Hero → About → Drinks → Master → Access → Footer
+   ============================================================ */
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import AboutSection from "@/components/AboutSection";
+import DrinksSection from "@/components/DrinksSection";
+import MasterSection from "@/components/MasterSection";
+import AccessSection from "@/components/AccessSection";
+import Footer from "@/components/Footer";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div
+      className="min-h-screen"
+      style={{ background: "oklch(0.16 0.005 60)" }}
+    >
+      <Navbar />
+      <HeroSection />
+      <AboutSection />
+      <DrinksSection />
+      <MasterSection />
+      <AccessSection />
+      <Footer />
     </div>
   );
 }
